@@ -4,3 +4,4 @@ A Gaussian process based approach for the reconstruction of strain from high-ene
 
 The matlab script run_example.m will simulate the measurements and then run the reconstruction. The number of sample rotation angles can be changed by a parameter at the top of the script.
 
+Note: the added measurement noise is random and so the results will vary slightly with each run, particularly if the number of rotations is set low (i.e. a low number of measurements is used).
