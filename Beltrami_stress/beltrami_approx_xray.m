@@ -51,7 +51,6 @@ end
 %% calculate Phi_yI
 
 if nargout < 4
-
     [Idfuncs,lambdasA,SA] = basisFuncCom(MM,m,ACF,A.lx,A.ly,A.lz,A.sig_f,nhat,entry,exit,[0 1 1 0 0 1],[],[],[],nsegs);
     IdydyA = Idfuncs(:,:,2);
     IdzdzA = Idfuncs(:,:,3);
@@ -188,7 +187,7 @@ Phi_yI =[phi_yA,phi_yB,phi_yC,phi_yD,phi_yE,phi_yF]./L';
 if nargout > 3
     np = length(X(:));
     % and combined for speed
-    % interweave the Phis, so that we have [exx,eyy,ezz,exy,exz,ezz] for each
+    % interweave the Phis, so that we have [exx,eyy,ezz,exy,exz,eyz] for each
     % point
     Phi_T = NaN(np*6,mm_adj*6);
     Phi_T(1:6:end,:) = [-nu*dzdzA-nu*dydyA, dzdzB-nu*dxdxB, dydyC-nu*dxdxC, 2*nu*dxdyD, 2*nu*dxdzE, -2*dydzF]; % phi_exx;

@@ -17,7 +17,7 @@ m_per_ray = 36;
 % particularly with a low number of projections (measurements)
 
 % enable or disable hyperparameter optimisation
-HP_optimisation = true;        % change this to true to run, otherwise will use prefound values
+HP_optimisation = false;        % change this to true to run, otherwise will use prefound values
 %% define parameters of cantilever beam
 t = 6e-3;               % 6mm thickness             
 h = 10e-3;              % 10mm height
